@@ -1,0 +1,112 @@
+<ion-menu contentId="guia-cruceros">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button [routerLink]="['/pagina-principal']">
+        <ion-label>Pagina Principal</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/preguntas-frecuentes']">
+        <ion-label>Preguntas frecuentes</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/guias-cruceros']">
+        <ion-label>Guías de Cruceros</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/main']">
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="guia-cruceros">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Guias de Cruceros</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true">
+      <ion-item color="primary">
+        <h2 class="align-center">DELÉITATE CON DELICIOSOS PLATOS</h2>
+      </ion-item>
+      <ion-img 
+      src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/dining/main-dining-room/assets/main-dining-room-mozzarella-salad-pv.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        La comida es uno de los factores más importantes de las vacaciones y, a bordo de los barcos de Royal Caribbean, 
+        encontrarás la mejor gastronomía en alta mar, ¡sin coste adicional y siempre que te apetezca! <br>
+        Tanto para desayunar, como para comer o cenar, Windjammer Café es un lugar que no puedes dejar de visitar, 
+        ya que ofrece una amplia variedad de platos recién hechos y servidos a modo buffet en un entorno tranquilo. <br>
+        ¿Te apetece algo más formal? Si es así, opta por el impresionante comedor principal de varios pisos que ofrece 
+        una carta rotativa en la que encontrarás platos internacionales muy tentadores como los escargots y el atún de aleta amarilla marroquí. <br>
+        Recuerda que la comida en el Main Dining Room es de cortesía, ¡de manera que puedes pedir todos los platos que te entren por los ojos!
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="align-center">DESAFÍA A TU LADO MÁS ATREVIDO</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/activity/ripcord-by-ifly/ifly-ripcord-little-girl-flying-instructor.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        ¿Has pensado alguna vez que te lanzarías en caída libre en el mar para sentir el chute de adrenalina que supone surcar el aire? <br>
+        ¿No? Bueno, ¡pues RipCord by iFly te invita a poner a prueba tu valentía (sin más coste que el de ponerte el corazón a doscientos)! <br>
+        Y, ¿crees que puedes marcarte un «hang ten» como un surfista profesional y cabalgar sobre 136,383 litros de agua palpitante? <br>
+        ¡Te damos la bienvenida al simulador de surf FlowRider! ¿Te apetece aumentar la diversión familiar considerablemente? <br>
+        Pues apuesta por los karts de SeaPlex, el espacio de actividades de interior más grande en un crucero. ¡Os lo pasaréis pipa haciendo zigzags y quemando rueda!
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="align-center">SÉ TESTIGO DE UN ENTRETENIMIENTO DE PRIMERA</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/activity/entertainment-shows/broadway-show/mama-mia/image/allure-mamma-mia-broadway-three-women-singing-shows-entertainment.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Cuando reservas un crucero de Royal Caribbean, ¡puedes ir preparándote para disfrutar de algunos de los mejores espectáculos en alta mar! <br>
+        Taquillazos de Broadway como Grease y Mamma Mia. Magníficas producciones originales que combinan a la perfección acrobacias que desafían 
+        la gravedad con tecnología innovadora y diversidad de medios. Además algunas de las bandas visitantes más populares tocando conciertos 
+        en vivo que te harán bailar hasta bien entrada la noche
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="align-center">DISFRUTA DE DIVERSIÓN PARA CADA EDAD</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/activity/solarium/allure-of-the-seas-solarium-couple-pool-relaxing.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Incluso a los componentes de las familias más unidas les gusta dedicar un ratito a solas a actividades propias de su edad 
+        para luego volver a estar todos juntos de nuevo. Para papá y mamá, ese ratito puede ser una tarde tranquila tomando algo afrutado en el Solarium, 
+        una piscina solo para adultos con unas vistas al mar espectaculares, seguida de una cena romántica para dos. <br>
+        Por suerte, el premiado Programa Juvenil Adventure Ocean ofrece numerosas opciones para jóvenes aventureros y está incluido para niños de 3 a 12 años 
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="align-center">VISITA DESTINOS ÉPICOS A BORDO DE BARCOS IMPRESIONANTES</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/odyssey/odyssey-of-the-seas-greece-daytime.jpg?$1920x1080$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Al reservar un crucero por Europa con Royal Caribbean, tu viaje te llevará a algunos de los puertos más emblemáticos del planeta, 
+        y esos itinerarios cuidadosamente planificados, muchos de los cuales abarcan varios países, son parte de tu tarifa. <br>
+        Haz tu crucero desde Southampton a bordo del Anthem of the Seas hasta las soleadas playas de las Islas Canarias, 
+        para después pasar por Lisboa (nombrada una de las mejores ciudades del mundo) y echar el ancla en Vigo, España, la meca del marisco. <br>
+        También puedes zarpar desde Roma a las magníficas islas griegas donde las aguas color aguamarina del Egeo reflejan los molinos de Mykonos, 
+        los acantilados de Milos y la historia de la antigüedad preservada de manera increíble. <br>
+        Barcelona también resulta muy atractiva gracias a itinerarios que abarcan desde el Mediterráneo occidental hasta cruceros transatlánticos de 14 días de duración
+      </h5>
+      <p></p>
+  </ion-content>
+</div>

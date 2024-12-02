@@ -1,3 +1,59 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-menu menuId="menu" contentId="main-content" aria-hidden="true">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+     <ion-menu-toggle>
+       <ion-item button [routerLink]="['/perfil']">
+         <ion-label>Perfil <ion-icon name="person-circle"></ion-icon></ion-label>
+       </ion-item>
+     </ion-menu-toggle>
+     <ion-menu-toggle>
+       <ion-item button [routerLink]="['/pagina-principal']">
+        <ion-label>Pagina Principal <ion-icon name="home"></ion-icon></ion-label>
+       </ion-item>
+     </ion-menu-toggle>
+     <ion-menu-toggle>
+       <ion-item button [routerLink]="['/preguntas-frecuentes']">
+         <ion-label>Preguntas Frecuentes <ion-icon name="help"></ion-icon></ion-label>
+       </ion-item>
+     </ion-menu-toggle>
+     <ion-menu-toggle>
+       <ion-item button [routerLink]="['/guias-cruceros']">
+         <ion-label>Guías de Cruceros <ion-icon name="information-circle"></ion-icon></ion-label>
+       </ion-item>
+     </ion-menu-toggle>
+     <ion-menu-toggle>
+       <ion-item button [routerLink]="['/tiempo']">
+         <ion-label>El Tiempo <ion-icon name="partly-sunny"></ion-icon></ion-label>
+       </ion-item>
+     </ion-menu-toggle>
+     <ion-menu-toggle>
+       <ion-item button [routerLink]="['/reservar']">
+         <ion-label>Reservar <ion-icon name="calendar"></ion-icon></ion-label>
+       </ion-item>
+     </ion-menu-toggle>
+     <ion-menu-toggle *ngIf="isAdmin">
+        <ion-item button [routerLink]="['/gestor-cruceros']">
+          <ion-label>Gestor de Cruceros <ion-icon name="library"></ion-icon></ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+     <ion-item>
+       <ion-toggle [(ngModel)]="globalService.isDark" (ionChange)="toggleChange($event)" justify="space-between">
+         Dark Mode
+         <ion-icon name="moon"></ion-icon>
+       </ion-toggle>
+      </ion-item>
+      <ion-menu-toggle>
+       <ion-item color="danger" button (click)="logout()">
+         <ion-label>Cerrar Sesión</ion-label>
+         <ion-icon name="exit"></ion-icon>
+       </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="main-content"></ion-router-outlet>

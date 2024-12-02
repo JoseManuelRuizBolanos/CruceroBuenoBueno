@@ -1,0 +1,27 @@
+.align-center{
+    text-align: center;
+}
+
+.titulo{
+    color:white;
+    text-align: center;
+    font-size: 30px;
+    margin: 30px;
+}
+
+.colorAzul{
+    color:blue;
+}
+
+ion-input.custom {
+    --color: #0054e9;
+    --placeholder-color: ##0054e9;
+    --padding-start: 10px;
+}
+
+.img{
+    height: 20vh;
+    width: auto;
+    margin: auto;
+    display: block;
+  }

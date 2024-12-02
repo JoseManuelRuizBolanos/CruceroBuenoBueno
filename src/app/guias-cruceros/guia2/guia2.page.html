@@ -1,0 +1,180 @@
+<ion-menu contentId="guia-cruceros">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button [routerLink]="['/pagina-principal']">
+        <ion-label>Pagina Principal</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/preguntas-frecuentes']">
+        <ion-label>Preguntas frecuentes</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/guias-cruceros']">
+        <ion-label>Guías de Cruceros</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/main']">
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="guia-cruceros">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Guias de Cruceros</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true">
+      <ion-item color="primary">
+        <h2 class="centrar">1. BRUJAS, ZEEBRUGGE</h2>
+      </ion-item>
+      <ion-img 
+      src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/ports/bruges-zeebrugge-brussels-belgium/cuisine/zeebrugge-bruges-belgian-chocolate-local-food.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Brujas (Brugge en flamenco), una ciudad de cuento de hadas, es una de las escapadas a Europa más románticas. <br>
+        Esta pintoresca ciudad de calles adoquinadas está a solo un corto viaje en autobús desde el puerto de Zeebrugge. <br>
+        Brujas es una de las ciudades medievales mejor conservadas de Europa y es Patrimonio de la humanidad de la UNESCO. <br>
+        Intenta no visitarla en los ajetreados meses de verano para obtener las mejores vistas de los hermosos canales, puentes y edificios históricos.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="centrar">2. SEVILLA, CÁDIZ</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/spain-portugal-canary-islands/spain-seville-cadiz-cathedral-gothic-church.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Desembarca en Cádiz y tómate un momento para conocer esta atractiva ciudad española. <br>Se dice que es el asentamiento habitado continuamente más antiguo de Europa, 
+        fundado por los fenicios alrededor del año 1100 a. C. El casco antiguo es uno de los lugares más románticos de Europa. <br>
+        Únete a los amantes del sol y date un chapuzón en el Atlántico, para luego disfrutar de una comida para dos desde una terraza con vista al mar.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="centrar">3. Venecia, Italia</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/italy/venice-italy-canals-and-boats.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Probablemente uno de los mejores destinos para ir de luna de miel en Europa, esta ciudad del norte de Italia te dejará sin aliento.<br>
+        Para evitar las multitudes, no la visites durante la temporada alta de verano o quédate un poco más lejos de la acción. <br>
+        Hay muchas otras islas impresionantes y menos concurridas para elegir en la laguna veneciana, como Murano, donde los artesanos locales crean maravillosos 
+        trabajos de vidrio soplado a mano; Burano, conocido por sus productos de encaje hechos a mano; y Torcello, donde hay más ovejas que personas. <br>
+        Puedes descubrir la laguna desde tu propio kayak o tomar el autobús acuático Vaporetto que recorre las islas.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="centrar">4. VISBY, SUECIA</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/ports/visby-sweden/overview/sweden-visby-old-town-rose-bush.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Descubre el fotogénico casco antiguo, declarado Patrimonio de la humanidad de la UNESCO, que posee cabañas en colores pastel adornadas con rosas. <br>
+        También encontrarás ruinas de iglesias góticas y la Catedral de Visby que data del siglo XIII. <br>Pasea por la impresionante muralla de la ciudad, 
+        de aproximadamente 3,5 kilómetros de largo, que posee más de 30 torres, muchas puertas y fosos circundantes. En el excelente Museo de Gotland, 
+        puedes aprender sobre la historia de la región.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="centrar">5. LISBOA, PORTUGAL</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/ports/lisbon-portugal/overview/portugal-lisbon-torre-de-belem-sunset.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        La capital de Portugal, Lisboa, se encuentra entre los mejores destinos para ir de luna de miel en Europa. <br>
+        Conoce la elegante ciudad paseando por los callejones adoquinados perfectos para una postal y detente en los miradouros que se encuentran 
+        en las cimas de las colinas, como Castelo de São Jorge, Portas do Sol y Santa Luzia. <br>Estas terrazas te ofrecen vistas impresionantes 
+        de la Ciudad de las Siete Colinas y el mar. También puedes subir al elevador de Santa Justa entre Baixa y Bairro Alto para llegar a otro mirador impresionante.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="centrar">6. ZADAR, CROACIA</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/ports/zadar-croatia/things-to-do/croatia-zadar-solar-panel-light-show.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Esta encantadora ciudad croata ubicada en la costa de Dalmacia no se llena tanto como Split y Dubrovnik más al sur, 
+        lo que la convierte en una de las mejores escapadas románticas de Europa. <br>Entra por las puertas venecianas del casco antiguo 
+        y pasea por el monumental Foro Romano. Tómate un café en Narodni Trg (Plaza del Pueblo). Luego escucha el único Órgano marino del mundo: 
+        las olas crean hermosas melodías a través de tuberías submarinas. <br>Fue creado por el arquitecto local Nikola Bašić. <br>También hizo el Saludo al Sol, 
+        un gran círculo con placas de vidrio que crean un espectáculo de luces y acumulan energía. <br>Además, debes probar algunos mariscos frescos 
+        del Adriático como los calamares y el risotto con tinta de sepia.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="centrar">7. REIKIAVIK, ISLANDIA</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/iceland/iceland-reykjavik-blue-lagoon-spa-geothermal.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        La peculiar y creativa capital de Islandia es uno de los mejores destinos para ir de luna de miel en Europa. <br>
+        Poco después de llegar al centro de la ciudad, verás la asombrosa iglesia de Hallgrimskirkja, que domina el horizonte. <br>
+        La torre campanario de aproximadamente 75 metros de alto, a la que ahora se puede llegar en ascensor, ofrece una buena vista de la capital 
+        y sus impresionantes alrededores. <br>Puedes escuchar al organista tocar el gran órgano de 5.275 tubos y admirar la arquitectura de estilo expresionista.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="centrar">8. KOTOR, MONTENEGRO</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/ports/kotor-montenegro/overview/kotor-montenegro-castle-sunset.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Este hermoso pueblo pequeño, situado en el pequeño país de Montenegro, es uno de los lugares más románticos de Europa. <br>
+        Al desembarcar, quedarás impresionado por la vista de las montañas circundantes, las casas medievales con sus tejados anaranjados y los majestuosos fuertes.<br>
+        Cruza la puerta Sea Gate, que data del siglo XVI, para ingresar al encantador casco antiguo. <br>Pasea por el estrecho laberinto de calles adoquinadas donde podrás 
+        ver ropa en tendederos, maravíllate con los palacios venecianos y siéntate a tomar un café. <br>También puede mirar dentro de la iglesia ortodoxa de San Nicolás 
+        o la Catedral de San Trifón.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="centrar">9. LAGO NESS, ESCOCIA</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/ports/loch-ness-scotland/overview/scotland-inverness-loch-ness-castle.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Un viaje a la capital cultural de las Tierras Altas Escocesas en la costa noreste es una de las mejores actividades para parejas en Europa. <br>
+        Se dice que el pueblo fue fundado por el rey David en el siglo XII, pero la mayoría de las casas actuales se construyeron después de 1822.<br>
+        El ancho y poco profundo río Ness atraviesa la ciudad hasta el mar a partir del lago Ness. Uno de los puntos destacados de Inverness es un agradable 
+        paseo por el río hasta las islas del río Ness.<br> En el camino, verás la antigua iglesia alta que data del siglo XVIII y el castillo de Inverness. <br>
+        Las pequeñas islas, que son un popular lugar para picnic, están unidas por elegantes puentes peatonales victorianos.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="centrar">10. TALLINN, ESTONIA</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/ports/tallinn-estonia/overview/estonia-tallinn-orthodox-alexander-nevsky-cathedral.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        La fotogénica capital de Estonia es otro de los lugares más románticos de Europa y también uno de los mejores destinos para ir de luna de miel en Europa. <br>
+        La ciudad, que está situada en el mar Báltico frente a Helsinki, se estableció en la Edad Media. <br>Hoy es una ciudad compacta y verde con una mezcla emocionante 
+        de lo antiguo y lo nuevo. Para disfrutar de una gran vista del casco antiguo, declarado Patrimonio de la humanidad de la UNESCO, camina hasta la colina Toompea 
+        y luego pasea por el casco antiguo, donde encontrarás castillos de cuentos de hadas, pasadizos estrechos, casas medievales e iglesias antiguas. <br>
+        Admira los mosaicos y los íconos de la catedral ortodoxa de Alexander Nevsky y echa un vistazo al parlamento Riigikogu de color rosa.
+      </h5>
+      <p></p>
+  </ion-content>
+</div>

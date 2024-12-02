@@ -1,0 +1,30 @@
+.colorBlanco{
+    color:white;
+}
+
+.align-center{
+    text-align: center;
+}
+
+.name{
+    text-align: center;
+    font-weight: 700;
+}
+
+.email{
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.titulo{
+    text-align: center;
+    margin: 50px;
+}
+
+.perfil{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 50px 15px;
+}

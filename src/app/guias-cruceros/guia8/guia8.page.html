@@ -1,0 +1,167 @@
+<ion-menu contentId="guia-cruceros">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button [routerLink]="['/pagina-principal']">
+        <ion-label>Pagina Principal</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/preguntas-frecuentes']">
+        <ion-label>Preguntas frecuentes</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/guias-cruceros']">
+        <ion-label>Guías de Cruceros</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/main']">
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="guia-cruceros">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Guias de Cruceros</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true">
+      <ion-item color="primary">
+        <h2 class="centrar">1. ELIGE TU PARAÍSO</h2>
+      </ion-item>
+      <ion-img 
+      src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/belize/belize-white-sand-beach.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Las Islas Vírgenes Británicas son un territorio privilegiado para ir de isla en isla, ya que te permiten ir de un trocito del paraíso a otro. <br>
+        Disfruta de las aguas prístinas en The Baths, un paraíso para tomarte una selfis ubicado en Virgen Gorda, luego dirígete a la isla coralina Anegada 
+        para probar una barbacoa de langosta fresca y termina tu expedición en Jost Van Dyke para degustar del famoso cóctel Painkiller a base de ron.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="centrar">2. DISFRUTA DEL SONIDO</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/caribbean-beaches/traditional-caribbean-musicians.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Jamaica irradia su propio ambiente isleño único, en especial cuando se trata de música. <br>Los sonidos del reggae invaden las calles cuando salen del Redbones 
+        Blues Cafe en Kingston, el salón de baile Amnesia en Ocho Ríos y el club nocturno Jungle en Negril. <br>No importa a dónde vayas, no podrás evitar bailar.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="align-center">3. ¡MÁS MOFONGO, POR FAVOR!</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/eastern-caribbean/caribbean-mofongo-fried-green-plantains.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Puerto Rico es quizás la capital culinaria del Caribe, famosa por su variedad de platos coloridos, como el mofongo con ajo, un plato de puré de plátano frito, 
+        o el arroz con gandules y lechón, el sabroso arroz amarillo y gandules con carne de cerdo asada y la clásica piña colada, que no necesita presentación y 
+        fue inventada en la isla.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="centrar">4. UN VISTAZO AL PASADO</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/caribbean-ancient-ruins-and-cities/mayan-ruins-in-cozumel-mexico.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Pasa de caminar sobre la arena a caminar sobre ruinas antiguas en Cozumel y Cabo San Lucas, dos destinos llenos de encanto tanto mexicano como caribeño. <br>
+        Para ver las ondulantes olas de agua turquesa, dirígete a la Costa Maya tropical para nadar en las playas de Yucatán o pasear por el famoso malecón de Puerto Vallarta.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="centrar">5. UNA VIDA EN EL AGUA</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/content/destinations/perfect-day/perfect-day-island-cococay-bahamas-snorkeling-family.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        La capital de Portugal, Lisboa, se encuentra entre los mejores destinos para ir de luna de miel en Europa. <br>
+        Conoce la elegante ciudad paseando por los callejones adoquinados perfectos para una postal y detente en los miradouros que se encuentran 
+        en las cimas de las colinas, como Castelo de São Jorge, Portas do Sol y Santa Luzia. <br>Estas terrazas te ofrecen vistas impresionantes 
+        de la Ciudad de las Siete Colinas y el mar. <br>También puedes subir al elevador de Santa Justa entre Baixa y Bairro Alto para llegar a otro mirador impresionante.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="centrar">6. MARES Y SALUDOS</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/caribbean-wildlife-encounters/pink-flamingos-in-aruba-island.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Aruba alberga algunas de las playas más vírgenes del Caribe, desde Eagle Beach hasta Andicuri Beach. <br>Aruba tiene sol, arena y mucho encanto caribeño sereno. <br>
+        Si deseas un paisaje salvaje y escarpado, dirígete al Parque Nacional de Vida Silvestre Arikok y nada en una piscina natural de aguas color turquesa rodeada 
+        de formaciones de rocas volcánicas.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="align-center">7. QUE LA FUERZA DEL BOSQUE TE ACOMPAÑE</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/caribbean-wildlife-encounters/jungle-path-el-yunque-national-forest.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Santa Lucía es bendecida de contar con vistas listas para enmarcar, especialmente cuando se trata de los picos monumentales que adornan sus costas. <br>
+        Lucía ha sido bendecida con vistas listas para enmarcar, en especial cuando se trata de los picos monumentales que adornan sus costas. <br>
+        Los más famosos son las imponentes Pitons, dos torres volcánicas que se ubican junto al mar que puedes recorrer siguiendo el sendero natural Gros Piton. <br>
+        El viaje promete vistas icónicas e inolvidables de la escarpada costa de Santa Lucía.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="centrar">8. RECORRE LAS CAVERNAS</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/caribbean-ancient-ruins-and-cities/belize-limestone-cave-natural-lazy-river.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Encuentra a los mayas dentro de las cuevas de Belice. Estos laberintos subterráneos se utilizaron como sitios ceremoniales y puedes encontrar muchas reliquias antiguas, 
+        desde cerámica hasta monumentos y esqueletos brillantes, en las profundidades. <br>Visite Barton Creek Cave, Actun Loch Tunich Cave o Rio Frio Cave para descubrir estos 
+        tesoros asombrosos, así como formaciones rocosas y piscinas naturales
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="align-center">9. DIVERSIÓN ENTRE FLORA Y FAUNA</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/caribbean-wildlife-encounters/mexican-iguana-in-tulum-riviera-maya-mexico.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Mientras caminas por los bosques y las arenas blancas de St. Maarten, sin duda verás iguanas verdes, pelícanos marrones, árboles de guayaba y ranas silbantes. <br>
+        Pero la hermosa flora y fauna no desaparece ahí. <br>Dirígete a aguas abiertas para ver ballenas jorobadas o conduce a través de pueblos extravagantes para ver casas 
+        adornadas con Lantana Camara, la colorida flor nacional de St. Maarten.
+      </h5>
+      <p></p>
+      <ion-item color="primary">
+        <h2 class="align-center">10. PARAÍSO EN TONOS PASTEL</h2>
+      </ion-item>
+      <ion-img 
+        src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/ports/willemstad/willemstad-curacao-shopping-large-colorful-houses-willemstad-curacao-port.jpg?$1040x520$">
+      </ion-img>
+      <p></p>
+      <h5 class="align-center">
+        Todas las islas del Caribe se caracterizan por ser coloridas, pero Curazao es un verdadero arcoíris de matices. <br>Desde sus dunas de arena dorada y aguas de color zafiro, 
+        hasta sus colinas boscosas de color esmeralda y los edificios coloniales pintados en colores pastel que bordean el paseo marítimo de Willemstad, 
+        este oasis de influencia holandesa ofrece algo para cada explorador. <br>Satisface tus ansias de cultura en las tiendas y los mercados de Punda, 
+        el asentamiento original de la isla. <br>O toma el sol en una de las 38 espectaculares playas escondidas de Curazao. <br>Sea cual sea el tipo de aventura que busques, 
+        la encontrarás en este pequeño trozo del paraíso.
+      </h5>
+      <p></p>
+  </ion-content>
+</div>

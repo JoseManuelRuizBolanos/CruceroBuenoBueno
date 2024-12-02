@@ -1,0 +1,169 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/gestor-cruceros"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar Crucero</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="editForm" (ngSubmit)="saveChanges()">
+    <ion-item class="titulo" color="primary">
+      <ion-title>Crucero</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Nombre del Crucero:" [clearInput]="true" placeholder="Añade el nombre del Crucero" name="name" formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item class="titulo" color="primary">
+      <ion-title>Subtitulo</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Subtitulo del Crucero" [clearInput]="true" placeholder="Añade el subtitulo del Crucero" name="subtitle" formControlName="subtitle"></ion-input>
+    </ion-item>
+
+    <ion-item class="titulo" color="primary">
+      <ion-title>Imagen del Crucero</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Imagen del Crucero" [clearInput]="true" placeholder="Añade la imagen del Crucero" name="imagenCrucero" formControlName="imagenCrucero"></ion-input>
+    </ion-item>
+
+    <ion-item class="titulo" color="primary">
+      <ion-title>Descripción</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Descripción del Crucero" [clearInput]="true" placeholder="Añade la descripción del Crucero" name="descripcion" formControlName="descripcion"></ion-input>
+    </ion-item>
+    
+    <ion-item class="titulo" color="primary">
+      <ion-title>Imagen de la Descripción</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Imagen de la Descripción" [clearInput]="true" placeholder="Añade la imagen de la descripcion" name="imagenDescripcion" formControlName="imagenDescripcion"></ion-input>
+    </ion-item>
+
+    <ion-item class="titulo" color="primary">
+      <ion-title>Título Que Hacer</ion-title>
+    </ion-item> 
+    <div formArrayName="tituloQueHacer">
+      <ion-item *ngFor="let item of tituloQueHacer.controls; let i = index" [formGroupName]="i">
+        <ion-input [label]="'Título Que Hacer ' + (i + 1)" [clearInput]="true" placeholder="Añade el titulo de Que Hacer" formControlName="descripcion"></ion-input>
+      </ion-item>
+    </div>
+    <div class="titulo">
+      <ion-button (click)="addTituloQueHacerButton()">+</ion-button>
+    </div>
+
+    <ion-item class="titulo" color="primary">
+      <ion-title>Imagen Que Hacer</ion-title>
+    </ion-item>
+    <div formArrayName="imagenQueHacer">
+      <ion-item *ngFor="let item of imagenQueHacer.controls; let i = index" [formGroupName]="i">
+        <ion-input [label]="'Imagen Que Hacer ' + (i + 1)" [clearInput]="true" placeholder="Añade la imagen de Que Hacer" formControlName="descripcion"></ion-input>
+      </ion-item>
+    </div>
+    <div class="titulo">
+      <ion-button (click)="addImagenQueHacerButton()">+</ion-button>
+    </div>
+
+    <ion-item class="titulo" color="primary">
+      <ion-title>Descripción Que Hacer</ion-title>
+    </ion-item>
+    <div formArrayName="descripcionQueHacer">
+      <ion-item *ngFor="let item of descripcionQueHacer.controls; let i = index" [formGroupName]="i">
+        <ion-input [label]="'Descripción Que Hacer ' + (i + 1)" [clearInput]="true" placeholder="Añade la descripcion de Que Hacer" formControlName="descripcion"></ion-input>
+      </ion-item>
+    </div>
+    <div class="titulo">
+      <ion-button (click)="addDescripcionQueHacerButton()">+</ion-button>
+    </div>
+
+    <ion-item class="titulo" color="primary">
+      <ion-title>Título Camarotes</ion-title>
+    </ion-item>
+    <div formArrayName="tituloCamarotes">
+      <ion-item *ngFor="let item of tituloCamarotes.controls; let i = index" [formGroupName]="i">
+        <ion-input [label]="'Titulo Camarotes ' + (i + 1)" [clearInput]="true" placeholder="Añade el titulo de Camarotes" formControlName="descripcion"></ion-input>
+      </ion-item>
+    </div>
+    <div class="titulo">
+      <ion-button (click)="addTituloCamarotesButton()">+</ion-button>
+    </div>
+
+    <ion-item class="titulo" color="primary">
+      <ion-title>Descripción Camarotes</ion-title>
+    </ion-item>
+    <div formArrayName="descripcionCamarotes">
+      <ion-item *ngFor="let item of descripcionCamarotes.controls; let i = index" [formGroupName]="i">
+        <ion-input [label]="'Descripción Camarotes ' + (i + 1)" [clearInput]="true" placeholder="Añade la descripcion de Camarotes" formControlName="descripcion"></ion-input>
+      </ion-item>
+    </div>
+    <div class="titulo">
+      <ion-button (click)="addDescripcionCamarotesButton()">+</ion-button>
+    </div>
+
+    <ion-item class="titulo" color="primary">
+      <ion-title>Imagen Camarotes</ion-title>
+    </ion-item>
+    <div formArrayName="imagenCamarotes">
+      <ion-item *ngFor="let item of imagenCamarotes.controls; let i = index" [formGroupName]="i">
+        <ion-input [label]="'Imagen Camarotes ' + (i + 1)" [clearInput]="true" placeholder="Añade la imagen de Camarotes" formControlName="descripcion"></ion-input>
+      </ion-item>
+    </div>
+    <div class="titulo">
+      <ion-button (click)="addImagenCamarotesButton()">+</ion-button>
+    </div>
+
+    <ion-item class="titulo" color="primary">
+      <ion-title>Imagen de Planos</ion-title>
+    </ion-item>
+    <div formArrayName="planos">
+      <ion-item *ngFor="let item of planos.controls; let i = index" [formGroupName]="i">
+        <ion-input [label]="'Imagen Planos ' + (i + 1)" [clearInput]="true" placeholder="Añade la imagen de Planos" formControlName="descripcion"></ion-input>
+      </ion-item>
+    </div>
+    <div class="titulo">
+      <ion-button (click)="addPlanosButton()">+</ion-button>
+    </div>
+
+    <ion-item class="titulo" color="primary">
+      <ion-title>Lugares</ion-title>
+    </ion-item>
+    <div formArrayName="lugares">
+      <ion-item *ngFor="let item of lugares.controls; let i = index" [formGroupName]="i">
+        <ion-input [label]="'Nombre Lugares ' + (i + 1)" [clearInput]="true" placeholder="Añade el nombre de Lugares" formControlName="descripcion"></ion-input>
+      </ion-item>
+    </div>
+    <div class="titulo">
+      <ion-button (click)="addLugaresButton()">+</ion-button>
+    </div>
+
+    <ion-item class="titulo" color="primary">
+      <ion-title>Precio Lugares</ion-title>
+    </ion-item>
+    <div formArrayName="precioLugares">
+      <ion-item *ngFor="let item of precioLugares.controls; let i = index" [formGroupName]="i">
+        <ion-input [label]="'Precio Lugares ' + (i + 1)" [clearInput]="true" placeholder="Añade el precio de Lugares" formControlName="descripcion" type="number"></ion-input>
+      </ion-item>
+    </div>
+    <div class="titulo">
+      <ion-button (click)="addPrecioLugaresButton()">+</ion-button>
+    </div>
+
+    <ion-item class="titulo" color="primary">
+      <ion-title>Puertos</ion-title>
+    </ion-item>
+    <div formArrayName="puertos">
+      <ion-item *ngFor="let item of puertos.controls; let i = index" [formGroupName]="i">
+        <ion-input [label]="'Nombre Puertos ' + (i + 1)" [clearInput]="true" placeholder="Añade el nombre de Puertos" formControlName="descripcion"></ion-input>
+      </ion-item>
+    </div>
+    <div class="titulo">
+      <ion-button (click)="addPuertosButton()">+</ion-button>
+    </div>
+    <ion-button expand="full" color="danger" (click)="borrarCrucero(crucero.id)">Borrar Crucero</ion-button>
+    <ion-button expand="full" type="submit" color="success">Guardar Cambios</ion-button>
+  </form>
+</ion-content>

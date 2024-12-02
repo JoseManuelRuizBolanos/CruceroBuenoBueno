@@ -1,0 +1,79 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-item lines="none"></ion-item>
+    <div class="name">
+      <ion-title>{{userName}}</ion-title>
+    </div>
+    <p></p>
+    <div class="email">
+      <ion-title>{{userEmail}}</ion-title>
+    </div>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Cruceros Reservados</ion-title>
+    </ion-item>
+    <ion-list>
+      <ion-item *ngFor="let crucero of crucerosReservados" lines="none" style="text-align: center;">
+        <ion-label>
+          Nombre del Crucero: {{crucero.nombreCrucero}}<br>
+          <p><br></p>
+          Fecha de la Reserva: {{crucero.fechaInicio}}<br>
+          <p><br></p>
+          Número de Noches: {{crucero.noches}}<br>
+          <p><br></p>
+          Número de Huéspedes: {{crucero.huespedes}}<br>
+          <p><br></p>
+          Camarote: {{crucero.nombreCamarote.name}}<br>
+          <p><br></p>
+          Número de Camarotes: {{crucero.numeroCamarotes}}<br>
+          <p><br></p>
+          Lugar de Visita: {{crucero.lugares.name}}<br>
+          <p><br></p>
+          Puerto de Salida: {{crucero.puertoSalida.name}}<br>
+          <p><br></p>
+          Precio Total: {{crucero.precioTotal}}€
+          <p><br></p>
+          <ion-button color="danger" (click)="borrarReserva(crucero.id)">Cancelar Reserva</ion-button>
+          <ion-item></ion-item>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Cruceros Visitados</ion-title>
+    </ion-item>
+    <ion-list>
+      <ion-item *ngFor="let crucero of crucerosVisitados" lines="none" style="text-align: center;">
+        <ion-label>
+          Nombre del Crucero: {{ crucero.nombreCrucero.name  || crucero.nombreCrucero }}<br>
+          <p><br></p>
+          Fecha de la Reserva: {{crucero.fechaInicio}}<br>
+          <p><br></p>
+          Número de Noches: {{crucero.noches}}<br>
+          <p><br></p>
+          Número de Huéspedes: {{crucero.huespedes}}<br>
+          <p><br></p>
+          Camarote: {{crucero.nombreCamarote.name}}<br>
+          <p><br></p>
+          Número de Camarotes: {{crucero.numeroCamarotes}}<br>
+          <p><br></p>
+          Lugar de Visita: {{crucero.lugares.name}}<br>
+          <p><br></p>
+          Puerto de Salida: {{crucero.puertoSalida.name}}<br>
+          <p><br></p>
+          Precio Total: {{crucero.precioTotal}}€
+          <ion-item></ion-item>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-item class="titulo" color="danger" button (click)="logout()">
+      <ion-title>Cerrar Sesión</ion-title>
+    </ion-item>
+  </ion-content>
+</div>

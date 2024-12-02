@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>El Tiempo</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div>
+    <ion-searchbar [(ngModel)]="cityName" (ngModelChange)="loadData()" placeholder="Introduce un lugar" [debounce]="1000" class="searchBar" animated></ion-searchbar>
+  </div>
+  <div *ngIf="!loading">
+    <ion-card class="cardStyle">
+      <ion-item lines="none">
+        <p style="font-weight: 500; color: white">La fecha de hoy:</p>
+        <ion-label id="date" slot="end">{{todayDate | date: "EEE dd MMM"}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <span id="temp">
+          {{(weatherTemp?.temp - 273.15).toFixed(0)}}
+        </span>
+        <span style="font-size: 1.3m; font-weight: bold; color: #F6B844; margin-bottom: 25px;">o</span>
+        <img slot="end" width="180px" height="180px" [src]=weatherIcon>
+      </ion-item>
+      <ion-item>
+        <span>{{cityName}}</span>
+      </ion-item>
+    </ion-card>
+    <ion-card class="cardStyle">
+      <ion-item>
+        <span>Temperatura máxima</span>
+        <span slot="end">{{(weatherTemp?.temp_max - 273.15).toFixed(0)}}</span>
+      </ion-item>
+      <ion-item>
+        <span>Temperatura mínima</span>
+        <span slot="end">{{(weatherTemp?.temp_min - 273.15).toFixed(0)}}</span>
+      </ion-item>
+      <ion-item>
+        <span>Humedad</span>
+        <span slot="end">{{weatherTemp?.humidity}}%</span>
+      </ion-item>
+    </ion-card>
+  </div>
+  <div *ngIf="loading"  style="text-align: center;">
+    <span>Prueba a buscar un lugar</span>
+  </div>
+</ion-content>

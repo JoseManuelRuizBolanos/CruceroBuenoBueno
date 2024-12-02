@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Crear Cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/RCI_Flag.svg/1200px-RCI_Flag.svg.png" style="width: 20%;" class="img">
+  </ion-img>
+  <p></p>
+  <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
+    <ion-input formControlName="nombre" class="custom" placeholder="Introduce tu nombre" errorText="El nombre no es válido"></ion-input>
+    <ion-input formControlName="email" class="custom" placeholder="Introduce tu correo" errorText="El correo no es válido"></ion-input>
+    <ion-input formControlName="password" class="custom" type="password" placeholder="Introduce tu contraseña" errorText="La contraseña debe de tener mínimo una letra mayúscula, un número y 8 dígitos">
+      <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+    </ion-input>
+    <div class="align-center">
+      <ion-button class="ion-padding" type="submit">Crear cuenta</ion-button>
+    </div>
+  </form>
+</ion-content>

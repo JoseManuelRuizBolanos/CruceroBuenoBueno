@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recordar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-img 
+    src ="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/RCI_Flag.svg/1200px-RCI_Flag.svg.png" style="width: 20%;" class="img">
+  </ion-img>
+  <p></p>
+  <ion-input [(ngModel)]="email" class="custom" placeholder="Introduce tu correo" errorText="El correo no es válido"></ion-input>
+  <div class="align-center">
+    <ion-button class="ion-padding" (click)="resetPassword()">Cambiar Contraseña</ion-button>
+  </div>
+</ion-content>

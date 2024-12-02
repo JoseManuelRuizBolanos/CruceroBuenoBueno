@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" aria-hidden="true">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Reservar</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="reservaForm" (ngSubmit)="onSubmit()">
+    <ion-item class="titulo" color="primary">
+      <ion-title>Nuestra Flota</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-select label="Crucero:" placeholder="Escoge un crucero" name="nombreCrucero" formControlName="nombreCrucero" [compareWith]="compareFn" (ionChange)="onCruceroChange()">
+        <ion-select-option *ngFor="let crucero of cruceros" [value]="crucero" type="text">{{ crucero.name }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Lugares para visitar</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-select label="Lugares para visitar:" placeholder="Que lugares quieres visitar" name="lugares" formControlName="lugares" [compareWith]="compareFn">
+        <ion-select-option *ngFor="let lugar of lugares" [value]="lugar" type="text">{{ lugar.name || lugar }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Escoge el puerto de salida</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-select label="Puerto de Salida:" placeholder="Escoge el puerto de salida" name="puertoSalida" formControlName="puertoSalida" [compareWith]="compareFn">
+        <ion-select-option *ngFor="let puerto of puertos" [value]="puerto" type="text">{{ puerto.name || puerto }}</ion-select-option>
+      </ion-select>   
+    </ion-item>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Cantidad de noches</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Número de noches:" placeholder="Escoge el número de noches" name="noches" formControlName="noches" type="number"></ion-input>
+    </ion-item>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Camarotes</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-select label="Camarote:" placeholder="Escoge un camarote" name="nombreCamarote" formControlName="nombreCamarote" [compareWith]="compareFn" (ionChange)="onCamaroteChange()">
+        <ion-select-option *ngFor="let camarote of camarotes" [value]="camarote" type="text">{{ camarote.name }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div style="text-align: center">Puedes ver todos los camarotes en la sección "Camarotes" dentro de cada crucero</div>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Cantidad de huéspedes</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Número de huéspedes:" placeholder="Escoge el número de huéspedes" name="huespedes" formControlName="huespedes" type="number" (ionInput)="calcularCamarotes()"></ion-input>
+    </ion-item>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Número de Camarotes</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Número de camarotes:" placeholder="Escoge el número de camarotes" name="numeroCamarotes" formControlName="numeroCamarotes" [value]="reservaForm.value.numeroCamarotes" readonly></ion-input>
+    </ion-item>
+    <div style="text-align: center">Depende del camarote que cojas tendrá un limite de huéspedes que podras ver en la sección "Camarotes" dentro de cada crucero</div>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Fecha de Inicio del Crucero</ion-title>
+    </ion-item>
+    <ion-datetime [min]="today" class="fecha" presentation="date" name="fechaInicio" formControlName="fechaInicio"></ion-datetime>
+    <div class="boton">
+      <ion-button type="submit" [disabled]="reservaForm.invalid">Reservar</ion-button>
+    </div>
+  </form>
+</ion-content>

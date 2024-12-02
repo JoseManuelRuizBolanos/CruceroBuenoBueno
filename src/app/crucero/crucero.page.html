@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ crucero?.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="descripcion">
+        <ion-icon name="book"></ion-icon>
+        <ion-label>Descripción</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="queHacer">
+        <ion-icon name="walk"></ion-icon>
+        <ion-label>Qué Hacer</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="camarotes">
+        <ion-icon name="bed"></ion-icon>
+        <ion-label>Camarotes</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="planos">
+        <ion-icon name="boat"></ion-icon>
+        <ion-label>Planos</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+    <ion-tab tab="descripcion">
+      <ion-content style="text-align: center">
+        <h2 *ngIf="crucero?.descripcion">{{ crucero?.descripcion }}</h2>
+        <img [src]="crucero?.imagenDescripcion"/>
+      </ion-content>
+    </ion-tab>
+    <ion-tab tab="queHacer">
+      <ion-content style="text-align: center">
+        <div *ngFor="let item of crucero?.tituloQueHacer; let i = index">
+          <ion-item color="primary">
+            <p class="centrar" *ngIf="item">{{ item }}</p>
+          </ion-item>
+          <img *ngIf="crucero?.imagenQueHacer[i]" [src]="crucero?.imagenQueHacer[i]" alt="Imagen de Qué Hacer"/>
+          <p class="align-center" *ngIf="crucero?.descripcionQueHacer[i]">{{ crucero?.descripcionQueHacer[i] }}</p>
+        </div>
+      </ion-content>
+    </ion-tab>
+    <ion-tab tab="camarotes">
+      <ion-content style="text-align: center">
+        <div *ngFor="let item of crucero?.tituloCamarotes; let i = index">
+          <ion-item color="primary">
+            <p class="centrar" *ngIf="item">{{ item }}</p>
+          </ion-item>
+          <img *ngIf="crucero?.imagenCamarotes[i]" [src]="crucero?.imagenCamarotes[i]" alt="Imagen de Camarotes"/>
+          <p class="align-center" *ngIf="crucero?.descripcionCamarotes[i]">{{ crucero?.descripcionCamarotes[i] }}</p>
+        </div>
+      </ion-content>
+    </ion-tab>
+    <ion-tab tab="planos">
+      <ion-content style="text-align: center">
+        <ion-item>
+          <ion-label>Selecciona un Plano</ion-label>
+          <ion-select [(ngModel)]="selectedPlano" interface="popover">
+            <ion-select-option *ngFor="let plano of crucero?.planos; let i = index" [value]="plano">{{ 'Plano ' + (i + 1) }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <div *ngIf="selectedPlano">
+          <img [src]="selectedPlano" alt="Plano Seleccionado" class="planos-imagen"/>
+        </div>
+      </ion-content>
+    </ion-tab>
+  </ion-tabs>
+</ion-content>
