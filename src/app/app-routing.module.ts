@@ -152,19 +152,23 @@ export const routes: Routes = [
   },
   {
     path: 'gestor-cruceros',
-    loadComponent: () => import('./gestor-cruceros/gestor-cruceros.page').then( m => m.GestorCrucerosPage)
+    loadComponent: () => import('./gestor-cruceros/gestor-cruceros.page').then( m => m.GestorCrucerosPage),
+    canActivate: [AuthGuard]
   },
   {
     path: 'add-crucero',
-    loadComponent: () => import('./add-crucero/add-crucero.page').then( m => m.AddCruceroPage)
+    loadComponent: () => import('./add-crucero/add-crucero.page').then( m => m.AddCruceroPage),
+    canActivate: [AuthGuard]
   },
   {
     path: 'edit-crucero/:id',
-    loadComponent: () => import('./edit-crucero/edit-crucero.page').then( m => m.EditCruceroPage)
+    loadComponent: () => import('./edit-crucero/edit-crucero.page').then( m => m.EditCruceroPage),
+    canActivate: [AuthGuard]
   },
   {
     path: 'crucero/:id',
-    loadComponent: () => import('./crucero/crucero.page').then( m => m.CruceroPage)
+    loadComponent: () => import('./crucero/crucero.page').then( m => m.CruceroPage),
+    canActivate: [AuthGuard]
   }
 
 
