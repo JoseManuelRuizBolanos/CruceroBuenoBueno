@@ -27,7 +27,6 @@ import { provideHttpClient } from '@angular/common/http';
           return getAuth();
         }
       }),
-      //getAuth()),
       provideFirestore(() => getFirestore()),
       provideStorage(() => getStorage()),
     ],
