@@ -7,22 +7,22 @@
   <ion-content>
     <ion-list>
      <ion-menu-toggle>
-       <ion-item button [routerLink]="['/perfil']">
+       <ion-item (click)="navigateToPerfil()">
          <ion-label>Perfil <ion-icon name="person-circle"></ion-icon></ion-label>
        </ion-item>
      </ion-menu-toggle>
      <ion-menu-toggle>
-       <ion-item button [routerLink]="['/pagina-principal']">
+       <ion-item (click)="navigateToPaginaPrincipal()">
         <ion-label>Pagina Principal <ion-icon name="home"></ion-icon></ion-label>
        </ion-item>
      </ion-menu-toggle>
      <ion-menu-toggle>
-       <ion-item button [routerLink]="['/preguntas-frecuentes']">
+       <ion-item (click)="navigateToPreguntasFrecuentes()">
          <ion-label>Preguntas Frecuentes <ion-icon name="help"></ion-icon></ion-label>
        </ion-item>
      </ion-menu-toggle>
      <ion-menu-toggle>
-       <ion-item button [routerLink]="['/guias-cruceros']">
+       <ion-item (click)="navigateToGuiasCruceros()">
          <ion-label>Guías de Cruceros <ion-icon name="information-circle"></ion-icon></ion-label>
        </ion-item>
      </ion-menu-toggle>

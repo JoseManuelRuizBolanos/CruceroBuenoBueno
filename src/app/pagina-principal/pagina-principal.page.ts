@@ -6,6 +6,7 @@ import { Router, RouterLink } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
 import { MenuController } from '@ionic/angular';
 import { CrucerosService } from '../cruceros.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-pagina-principal',
@@ -19,7 +20,8 @@ export class PaginaPrincipalPage implements OnInit {
   todosCruceros: any[] = [];
   searchTerm: string='';
   user: any
-  constructor(public authService:AuthenticationService, public router: Router, public menu: MenuController, public crucerosService: CrucerosService) { 
+  
+  constructor(public authService:AuthenticationService, public router: Router, public menu: MenuController, public crucerosService: CrucerosService, private location: Location) { 
     this.menuActive();
     this.loadCruceros();
   }
@@ -33,9 +35,10 @@ export class PaginaPrincipalPage implements OnInit {
   }
 
   reloadPage() {
-    this.router.navigateByUrl('/pagina-principal', { skipLocationChange: true }).then(() => {
-      this.router.navigate([decodeURIComponent(location.pathname)]);
-    });
+    this.location.replaceState('/');
+    setTimeout(() => {
+      this.router.navigate(['/pagina-principal']);
+    }, 50);
   }
 
   menuActive(){

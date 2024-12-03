@@ -8,7 +8,6 @@ export const routes: Routes = [
     redirectTo: 'pagina-principal',
     pathMatch: 'full'
   },
-  
   {
     path: 'login', 
     loadComponent: () => import ('./login/login.page').then(m => m.LoginPage)
@@ -151,11 +150,6 @@ export const routes: Routes = [
     loadComponent: () => import('./tiempo/tiempo.page').then( m => m.TiempoPage),
     canActivate: [AuthGuard]
   },
-  /*{
-    path: 'como-llegar',
-    loadComponent: () => import('./como-llegar/como-llegar.page').then( m => m.ComoLlegarPage),
-    canActivate: [AuthGuard]
-  },*/
   {
     path: 'gestor-cruceros',
     loadComponent: () => import('./gestor-cruceros/gestor-cruceros.page').then( m => m.GestorCrucerosPage)
@@ -178,7 +172,7 @@ export const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })
   ],
   exports: [RouterModule]
 })
