@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
-import { IonicModule} from '@ionic/angular';
+import { Router } from '@angular/router';
 import { AuthenticationService } from './authentication.service';
-import { FormsModule } from '@angular/forms';
 import { exit, personCircle, home, informationCircle, partlySunny, calendar, moon, help, library } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 import { UsuarioService } from './usuario.service';

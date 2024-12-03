@@ -24,31 +24,20 @@ export class AuthGuard implements CanActivate {
       this.auth.onAuthStateChanged(async user => {
         if (user) {
           this.global.uid= user.uid
-          
-        
-       
-
           const value: any = await Preferences.get({ key: 'modoOscuro' })
         this.global.isDark=value.value
             if(value.value == 'true'){
               this.global.initializeDarkPalette(value.value)
             }
-
           resolve(true);
-         
         } else {
-          console.log('resolve(false)');
           this.router.navigate(['login']);
           resolve(false);
-
-
         }
-
       }, error => {
         console.error('ERROR GUARD', error);
         this.router.navigate(['login']);
         resolve(false);
-
       })
     });
   }
